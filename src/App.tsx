@@ -1,21 +1,22 @@
 import React, {useState} from 'react';
 
 
+type InputChangeEvent = React.ChangeEvent<HTMLInputElement>;
 const App = () => {
 
     const [name, setName] = useState('');
     const [surname, setSurname] = useState('');
     const [age, setAge] = useState('');
     
-    const handleNameInput = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const handleNameInput = (event: InputChangeEvent) => {
         setName(event.target.value);
     }
     
-    const handleSurnameInput = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const handleSurnameInput = (event: InputChangeEvent) => {
         setSurname(event.target.value);
     }
     
-    const handleAgeInput = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const handleAgeInput = (event: InputChangeEvent) => {
         setAge(event.target.value);
     }
 
